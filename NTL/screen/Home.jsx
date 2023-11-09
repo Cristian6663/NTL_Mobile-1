@@ -6,30 +6,16 @@ import CardWelcome from '../components/Cards/CardWelcome';
 
 //resources needing
 import { Feather } from '@expo/vector-icons';
-import axios from 'axios';
+
 
 
 
 export default function Home({navigation}) {
-  const fetchData = async () => {
-    try{
-        const response = await axios.get("http://localhost:9000/api/Cursos");
-        
-    }catch(error){
-        console.error(error);
-    }
-  };
-
-   useEffect(() =>{
-   fetchData();
- }, []);
- console.log(response)
-
 
   return (
       <View>
         <View style={styles.viewSearch}>
-          {response?.map((datos) => (<li key={datos.Id_Usuario}>{datos.Titulo} </li>))}
+         
         <Feather name="search" size={22} color="black" />
           <TextInput placeholder='Search' style={styles.inputSearch}/>
           <TouchableOpacity style={styles.buttonFilter}>
