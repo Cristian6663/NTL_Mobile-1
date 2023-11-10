@@ -2,11 +2,11 @@ import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
 export default function CourseCard({navigation, direction, name = "hola"}) {
-  return (
+    
+    return (
     <TouchableOpacity onPress={() => {navigation.navigate(direction)}}>
         <View style={styles.containerCard}>
         <View style={styles.viewImage}>
-            
         </View>
         <View>
             <Text style={styles.textTitle}>{name}</Text>

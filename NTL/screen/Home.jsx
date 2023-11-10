@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
+
 import { TouchableOpacity, Text, TextInput, View, ScrollView, StyleSheet} from 'react-native';
 import CourseCard from '../components/Cards/CourseCard';
 import CourseCardLong from '../components/Cards/CourseCardLong';
 import CardWelcome from '../components/Cards/CardWelcome';
-
 //resources needing
 import { Feather } from '@expo/vector-icons';
-
-
 
 
 export default function Home({navigation}) {
@@ -15,7 +12,7 @@ export default function Home({navigation}) {
   return (
       <View>
         <View style={styles.viewSearch}>
-         
+        
         <Feather name="search" size={22} color="black" />
           <TextInput placeholder='Search' style={styles.inputSearch}/>
           <TouchableOpacity style={styles.buttonFilter}>
@@ -33,11 +30,7 @@ export default function Home({navigation}) {
             horizontal 
             showsHorizontalScrollIndicator={false}
             style={styles.viewScrollHead}>
-                  <CourseCard 
-                  name={"Java Desde Cero"}
-                  navigation={navigation}
-                  direction='DetailCourse'
-                  />
+                 
             </ScrollView>
             <View >
               <Text style={styles.textAllCourses}>Todos los cursos</Text>
@@ -71,6 +64,7 @@ export default function Home({navigation}) {
       </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   scrollPrincipal:{
