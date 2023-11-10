@@ -25,7 +25,7 @@ export default function Home({navigation}) {
           showsVerticalScrollIndicator={false}>
           <CardWelcome 
           navigation={navigation}/>
-            <Text style={styles.textBody}>Cursos recomendados</Text>
+            <Text style={styles.textBody}>Cursos Cristian</Text>
             <ScrollView 
             horizontal 
             showsHorizontalScrollIndicator={false}
