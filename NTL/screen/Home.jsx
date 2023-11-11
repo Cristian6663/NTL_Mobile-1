@@ -7,6 +7,7 @@ import CardWelcome from '../components/Cards/CardWelcome';
 import { Feather } from '@expo/vector-icons';
 
 
+
 export default function Home({navigation}) {
 
   return (
@@ -30,7 +31,10 @@ export default function Home({navigation}) {
             horizontal 
             showsHorizontalScrollIndicator={false}
             style={styles.viewScrollHead}>
-                 
+              <CourseCard
+              navigation={navigation}
+              direction='DetailCourse'
+              />
             </ScrollView>
             <View >
               <Text style={styles.textAllCourses}>Todos los cursos</Text>

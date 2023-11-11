@@ -1,9 +1,12 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
-import ButtonPrimary from '../../components/buttons/ButtonPrimary';
-import LinkName from '../../components/links/LinkName';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
+
+
+import FlatListSection from '../../components/flatList/flatListSection';
+import CardHeaderTitle from '../../components/Cards/CardHeaderTitle';
 
 export default function DetailCourse({navigation}) {
+
   return (
     <View>
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -11,29 +14,7 @@ export default function DetailCourse({navigation}) {
                 <Text>Imagen descriptiva</Text>
             </View>
             <View style={styles.containerCard}>
-                <Text style={styles.textTitle}>Android Studio: DESDE DE CERO</Text>
-                <Text style={styles.textDescription}>Aprende a utilizar el IDE mas usado en el desarrolo de aplicaciones para android nativas</Text>
-                <View style={{flexDirection:'row'}}>
-                <Text style={styles.textMake}>Creado por</Text>
-                <LinkName 
-                    name="Marco Antonio"
-                    navigation={navigation}
-                    direction='TeacherProfile'
-                    />
-                </View>
-                <View style={styles.containerPressPrice}>
-                    <View style={styles.viewPrice}>
-                        <Text style={{fontSize:24, fontWeight:'bold'}}>175.00 MXN </Text>
-                        <Text style={{fontSize:18, color:'gray', textDecorationLine:'line-through'}}>399.00 MXN</Text>
-                    </View>
-                    <View style={styles.button}>
-                        <ButtonPrimary 
-                        text='Comprar curso'
-                        navigation={navigation}
-                        direction={'PlayCourse'}
-                        />
-                    </View>
-                </View>
+                <CardHeaderTitle />
                 <View style={{marginBottom:20}}>
                     <Text style={{fontSize:18, fontWeight:'bold', marginBottom:7}}>Lo que aprenderas:</Text>
                     <View>
@@ -44,36 +25,15 @@ export default function DetailCourse({navigation}) {
                         <Text style={{color:'#8578b0', fontWeight:'bold', fontSize:15}}> Ver mas</Text>
                     </View>
                 </View>
+                {/* section */}
                 <View style={{marginBottom:20}}>
                     <Text style={{fontSize:18, fontWeight:'bold', marginBottom:7}}>Contenido del curso:</Text>
                     <View style={styles.viewSection}>
-                        <TouchableOpacity style={styles.buttonSection}>
-                            <Text style={{fontWeight:'700'}}>Seccion 1 - </Text>
-                            <Text style={{fontWeight:'700'}}>Instalacion de Android Studio</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonSection}>
-                            <Text style={{fontWeight:'700'}}>Seccion 2 - </Text>
-                            <Text style={{fontWeight:'700'}}>Conceptos Basicos</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonSection}>
-                            <Text style={{fontWeight:'700'}}>Seccion 3 - </Text>
-                            <Text style={{fontWeight:'700'}}>Primer proyecto</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonSection}>
-                            <Text style={{fontWeight:'700'}}>Seccion 4 - </Text>
-                            <Text style={{fontWeight:'700'}}>Base de datos SQLite</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonSection}>
-                            <Text style={{fontWeight:'700'}}>Seccion 5 - </Text>
-                            <Text style={{fontWeight:'700'}}>Construyendo las pantallas</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonSection}>
-                            <Text style={{fontWeight:'700'}}>Seccion 6 - </Text>
-                            <Text style={{fontWeight:'700'}}>Deploy del proyecto</Text>
-                        </TouchableOpacity>
+                        <FlatListSection />    
                     </View>
                 </View>
                 <View style={{marginBottom:20}}>
+                    {/*Requisitos coding  */}
                     <Text style={{fontSize:18, fontWeight:'bold', marginBottom:7}}>Requisitos:</Text>
                     <View>
                         <Text style={styles.textRequire}> - Fundamentos de programacion</Text>
@@ -81,7 +41,7 @@ export default function DetailCourse({navigation}) {
                         <Text style={styles.textRequire}> - Navegador</Text>
                         <Text style={styles.textRequire}> - Editor de codigo (VSCODE preferencial)</Text>
                         <Text style={styles.textRequire}> - Conocer fundamentos de base de datos SQL</Text>
-                        <Text style={{color:'#8578b0', fontWeight:'bold', fontSize:15}}> Ver mas</Text>
+                        <Text style={{color:'#8578b0', fontWeight:'bold', fontSize:15}}> Ver mas</Text>  
                     </View>
                 </View>
                 <View style={{marginBottom:20}}>
@@ -110,37 +70,8 @@ const styles = StyleSheet.create({
     containerCard:{
         marginHorizontal:10
     },
-    textTitle:{
-        fontSize:24,
-        marginBottom:2
-    },
-    textDescription:{
-        fontSize:16,
-        color:'black',
-        fontWeight:'300',
-        marginBottom:5
-    },
-    button:{
-        alignItems:'center',
-        marginBottom:20
-    },
-    textMake:{
-        color:'gray',
-        marginBottom:7
-    },
-    viewPrice:{
-        flexDirection:'row',
-        alignItems:'center'
-    },
     viewSection:{
         gap:7
-    },
-    buttonSection:{
-        flexDirection:'row',
-        padding:10,
-        borderRadius:3,
-        borderWidth:1,
-        paddingHorizontal:15
     },
     textRequire:{
         color:'gray',
