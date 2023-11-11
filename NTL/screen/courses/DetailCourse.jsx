@@ -1,9 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
-
-
-import FlatListSection from '../../components/flatList/flatListSection';
 import CardHeaderTitle from '../../components/Cards/CardHeaderTitle';
+import FlatSection from '../../components/flatList/FlatSection';
 
 export default function DetailCourse({navigation}) {
 
@@ -14,7 +12,8 @@ export default function DetailCourse({navigation}) {
                 <Text>Imagen descriptiva</Text>
             </View>
             <View style={styles.containerCard}>
-                <CardHeaderTitle />
+                <CardHeaderTitle 
+                navigation={navigation} />
                 <View style={{marginBottom:20}}>
                     <Text style={{fontSize:18, fontWeight:'bold', marginBottom:7}}>Lo que aprenderas:</Text>
                     <View>
@@ -29,7 +28,7 @@ export default function DetailCourse({navigation}) {
                 <View style={{marginBottom:20}}>
                     <Text style={{fontSize:18, fontWeight:'bold', marginBottom:7}}>Contenido del curso:</Text>
                     <View style={styles.viewSection}>
-                        <FlatListSection />    
+                        <FlatSection />
                     </View>
                 </View>
                 <View style={{marginBottom:20}}>

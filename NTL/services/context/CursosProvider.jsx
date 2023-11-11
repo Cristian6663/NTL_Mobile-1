@@ -1,24 +1,16 @@
-import { createContext, useEffect } from "react";
-import { useState } from "react";
+import React from "react";
 
-const CursoContext = createContext();
-
-
-
+const CursoContext = React.createContext();
 
 const CursosProvider = ({children}) => {
-    const hola ="hola"
+    const hola ="hola";
 
     return(
         <CursoContext.Provider
-        value={{
+        value={
             hola
-        }}
+        }
         >{children}</CursoContext.Provider>
     )
 }
-export{
-    CursosProvider
-   
-}
-export default CursoContext
+export {CursoContext, CursosProvider}

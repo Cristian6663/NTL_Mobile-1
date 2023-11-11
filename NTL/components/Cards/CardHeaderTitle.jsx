@@ -4,7 +4,7 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary';
 import LinkName from '../../components/links/LinkName';
 
 
-export default function CardHeaderTitle() {
+export default function CardHeaderTitle({navigation}) {
   return (
     <>
         <Text style={styles.textTitle}>Android Studio: DESDE DE CERO</Text>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { TouchableOpacity, Text, StyleSheet} from 'react-native'
 
-export default function FlatListSection() {
+export default function FlatSection({}) {
   return (
     <TouchableOpacity style={styles.buttonSection}>
         <Text style={{fontWeight:'700'}}>Seccion 1 - </Text>
@@ -18,5 +18,3 @@ const styles = StyleSheet.create({
         paddingHorizontal:15
     },
 })
-
-

@@ -13,7 +13,6 @@ export default function Home({navigation}) {
   return (
       <View>
         <View style={styles.viewSearch}>
-        
         <Feather name="search" size={22} color="black" />
           <TextInput placeholder='Search' style={styles.inputSearch}/>
           <TouchableOpacity style={styles.buttonFilter}>
