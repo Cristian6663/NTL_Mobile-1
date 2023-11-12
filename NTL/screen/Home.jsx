@@ -1,18 +1,20 @@
-
 import { TouchableOpacity, Text, TextInput, View, ScrollView, StyleSheet} from 'react-native';
 import CourseCard from '../components/Cards/CourseCard';
 import CourseCardLong from '../components/Cards/CourseCardLong';
 import CardWelcome from '../components/Cards/CardWelcome';
+import useCursos from '../hooks/useCursos';
 //resources needing
 import { Feather } from '@expo/vector-icons';
 
 
 
 export default function Home({navigation}) {
-
+  const {hola} = useCursos()
+  
   return (
       <View>
         <View style={styles.viewSearch}>
+          <Text>{hola} </Text>
         <Feather name="search" size={22} color="black" />
           <TextInput placeholder='Search' style={styles.inputSearch}/>
           <TouchableOpacity style={styles.buttonFilter}>

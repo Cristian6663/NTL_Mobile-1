@@ -3,6 +3,7 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import CardHeaderTitle from '../../components/Cards/CardHeaderTitle';
 import FlatSection from '../../components/flatList/FlatSection';
 
+
 export default function DetailCourse({navigation}) {
 
   return (

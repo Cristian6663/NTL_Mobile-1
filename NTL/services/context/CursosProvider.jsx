@@ -3,14 +3,15 @@ import React from "react";
 const CursoContext = React.createContext();
 
 const CursosProvider = ({children}) => {
-    const hola ="hola";
+    const hola ="saludito";
 
     return(
         <CursoContext.Provider
         value={
-            hola
+            {hola}
         }
         >{children}</CursoContext.Provider>
     )
 }
-export {CursoContext, CursosProvider}
+export {CursosProvider}
+export default CursoContext

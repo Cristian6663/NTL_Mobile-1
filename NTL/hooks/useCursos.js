@@ -1,6 +1,8 @@
 import { useContext } from "react";
-import { CursoContex } from "../services/context/CursosProvider";
+import CursoContext from '../services/context/CursosProvider';
 
-export const useCursos = () =>{
-    return useContext(CursoContex);
+
+const useCursos = () =>{
+    return useContext(CursoContext);
 }
+export default useCursos;
