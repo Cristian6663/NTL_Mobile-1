@@ -1,14 +1,14 @@
 import React from 'react'
-import { TouchableOpacity, Text, StyleSheet } from 'react-native'
+import { Pressable, Text, StyleSheet } from 'react-native'
 
 export default function LinkName({name, navigation, direction}) {
   return (
-    <TouchableOpacity 
+    <Pressable 
     style={styles.viewName}
     onPress={() => {navigation.navigate(direction)}}
     >
         <Text style={styles.textLink}> {name}</Text>
-    </TouchableOpacity>
+    </Pressable>
   )
 }
 

@@ -5,6 +5,7 @@ import InputForm from '../../components/Inputs/InputForm';
 
 
 export default function LoginView({navigation}) {
+ 
   return (
       <KeyboardAvoidingView 
       style={styles.container}
@@ -13,6 +14,7 @@ export default function LoginView({navigation}) {
         <Image 
         source={require('../../assets/logo1.png')}
         style={styles.imagestyle}/>   
+        
         <View style={styles.viewContent}>
           <InputForm 
           text="Email"

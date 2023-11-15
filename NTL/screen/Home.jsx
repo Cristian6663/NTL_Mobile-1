@@ -1,20 +1,21 @@
-import { TouchableOpacity, Text, TextInput, View, ScrollView, StyleSheet} from 'react-native';
+import { Text, TextInput, View, ScrollView, StyleSheet} from 'react-native';
 import CourseCard from '../components/Cards/CourseCard';
 import CourseCardLong from '../components/Cards/CourseCardLong';
 import CardWelcome from '../components/Cards/CardWelcome';
 import useCursos from '../hooks/useCursos';
 //resources needing
 import { Feather } from '@expo/vector-icons';
+import { TouchableOpacity } from 'react-native-web';
 
 
 
 export default function Home({navigation}) {
-  const {hola} = useCursos()
   
+  const {cursos} = useCursos();
+  console.log(cursos)
   return (
       <View>
         <View style={styles.viewSearch}>
-          <Text>{hola} </Text>
         <Feather name="search" size={22} color="black" />
           <TextInput placeholder='Search' style={styles.inputSearch}/>
           <TouchableOpacity style={styles.buttonFilter}>
@@ -27,15 +28,21 @@ export default function Home({navigation}) {
           showsVerticalScrollIndicator={false}>
           <CardWelcome 
           navigation={navigation}/>
-            <Text style={styles.textBody}>Cursos Cristian</Text>
+            <Text style={styles.textBody}>Todos los cursos</Text>
             <ScrollView 
             horizontal 
             showsHorizontalScrollIndicator={false}
             style={styles.viewScrollHead}>
-              <CourseCard
-              navigation={navigation}
-              direction='DetailCourse'
-              />
+              {
+                cursos.map(curso => (
+                  <CourseCard
+                  key={curso.Id_Cursos}
+                  navigation={navigation}
+                  direction='DetailCourse'
+                  name={curso.Titulo}
+                  />
+                ))
+              }
             </ScrollView>
             <View >
               <Text style={styles.textAllCourses}>Todos los cursos</Text>

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import { Text, View, StyleSheet, Pressable, TouchableOpacity} from 'react-native';
 
 export default function CourseCard({navigation, direction, name = "hola"}) {
-    
+
+
     return (
     <TouchableOpacity onPress={() => {navigation.navigate(direction)}}>
         <View style={styles.containerCard}>
