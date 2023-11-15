@@ -19,7 +19,7 @@ export default function Home({navigation}) {
         <Feather name="search" size={22} color="black" />
           <TextInput placeholder='Search' style={styles.inputSearch}/>
           <TouchableOpacity style={styles.buttonFilter}>
-            <Text style={{color:'white', fontWeight:'bold'}}>Buscar</Text>
+            <Text style={{color:'white', fontWeight:'bold'}}>Buscar curso</Text>
           </TouchableOpacity>
         </View>
         <View>
