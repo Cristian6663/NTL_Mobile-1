@@ -13,31 +13,6 @@ export default function MyCourse({navigation,}) {
         direction={'PlayCourse'}
         price='Matriculado'
         />
-        <CourseCardLong
-        navigation={navigation}
-        direction={'PlayCourse'}
-        price='Matriculado'
-        />
-        <CourseCardLong
-        navigation={navigation}
-        direction={'PlayCourse'}
-        price='Matriculado'
-        />
-        <CourseCardLong
-        navigation={navigation}
-        direction={'PlayCourse'}
-        price='Matriculado'
-        />
-        <CourseCardLong
-        navigation={navigation}
-        direction={'PlayCourse'}
-        price='Matriculado'
-        />
-        <CourseCardLong
-        navigation={navigation}
-        direction={'PlayCourse'}
-        price='Matriculado'
-        />
       </ScrollView>
     </View>
   )

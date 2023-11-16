@@ -30,6 +30,8 @@ export default function DetailCourse({navigation}) {
                     <Text style={{fontSize:18, fontWeight:'bold', marginBottom:7}}>Contenido del curso:</Text>
                     <View style={styles.viewSection}>
                         <FlatSection />
+                        <FlatSection />
+                        <FlatSection />
                     </View>
                 </View>
                 <View style={{marginBottom:20}}>
@@ -37,14 +39,13 @@ export default function DetailCourse({navigation}) {
                     <Text style={{fontSize:18, fontWeight:'bold', marginBottom:7}}>Requisitos:</Text>
                     <View>
                         <Text style={styles.textRequire}> - Fundamentos de programacion</Text>
-                        <Text style={styles.textRequire}> - Internet</Text>
-                        <Text style={styles.textRequire}> - Navegador</Text>
-                        <Text style={styles.textRequire}> - Editor de codigo (VSCODE preferencial)</Text>
-                        <Text style={styles.textRequire}> - Conocer fundamentos de base de datos SQL</Text>
+                        <Text style={styles.textRequire}> - Fundamentos de programacion</Text>
+                       
                         <Text style={{color:'#8578b0', fontWeight:'bold', fontSize:15}}> Ver mas</Text>  
                     </View>
                 </View>
                 <View style={{marginBottom:20}}>
+                    {/*descripcion */}
                     <Text style={{fontSize:18, fontWeight:'bold', marginBottom:7}}>Descripcion:</Text>
                     <View >
                         <Text style={{color:'gray', fontWeight:'400', fontSize:15, marginBottom:2}}> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima hic distinctio atque, dolorum accusamus earum eligendi fuga soluta perspiciatis amet rem maxime possimus doloribus aspernatur quaerat a excepturi quibusdam dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ipsa eligendi est accusamus, et quia cupiditate modi tempora eos omnis laudantium earum sunt ad at sint placeat inventore. Exercitationem, atque...

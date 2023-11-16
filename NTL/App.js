@@ -17,6 +17,7 @@ const Stack = createStackNavigator()
 function MyStack(){
   return(
     <Stack.Navigator>
+      <Stack.Screen name={'DetailCourse'} component={DetailCourse} options={{title:'Detalle de curso'}}/>
       <Stack.Screen name={'HomeAuth'} component={HomeAuthView} options={{headerShown:false}}/>
       <Stack.Screen name={'Login'} component={LoginView} options={{headerShown:false}}/>
       <Stack.Screen name={'PasswordReintent'} component={Password} options={{headerShown:false}}/>
@@ -24,7 +25,7 @@ function MyStack(){
       <Stack.Screen name={'Home'} component={BottomTab} options={{headerShown:false}}/>   
       <Stack.Screen name={'MyCourses'} component={MyCourse} />
       <Stack.Screen name={'PlayCourse'} component={PlayCourse} options={{title:'Android Studio: DESDE CERO'}}/>
-      <Stack.Screen name={'DetailCourse'} component={DetailCourse} options={{title:'Detalle de curso'}}/>
+      
       <Stack.Screen name={'TeacherProfile'} component={TeacherProfile} options={{title:'Perfil profesor'}}/>
       <Stack.Screen name={'Profile'} component={Profile} />
     </Stack.Navigator>
