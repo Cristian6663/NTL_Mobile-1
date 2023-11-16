@@ -1,12 +1,10 @@
-import { Text, TextInput, View, ScrollView, StyleSheet} from 'react-native';
+import { Text, TouchableOpacity, TextInput, View, ScrollView, StyleSheet} from 'react-native';
 import CourseCard from '../components/Cards/CourseCard';
 import CourseCardLong from '../components/Cards/CourseCardLong';
 import CardWelcome from '../components/Cards/CardWelcome';
 import useCursos from '../hooks/useCursos';
 //resources needing
 import { Feather } from '@expo/vector-icons';
-import { TouchableOpacity } from 'react-native-web';
-
 
 
 export default function Home({navigation}) {
